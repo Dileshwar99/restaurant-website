@@ -1,89 +1,167 @@
 # Zaika Mahal — Royal Indian Fine Dining & Tandoor
 
-<div align="center">
-
-  **An authentic, responsive luxury Indian restaurant website featuring Awadhi Dum Pukht cuisine, clay-oven tandoor specialties, automated multi-channel table reservations, and seamless mobile responsiveness.**
-
-  <br />
-
-  [Live Website](https://www.zaikamahal.com/) • [Book Table Online](#table-reservations) • [Setup Guide](#getting-started)
-
-</div>
+> A modern, fully responsive luxury restaurant website showcasing authentic Awadhi Dum Pukht cuisine, charcoal tandoor delicacies, and a multi-channel online table reservation pipeline.
 
 ---
 
-## 👑 About Zaika Mahal
+## 📌 Table of Contents
 
-Located in the heart of Connaught Place, New Delhi, **Zaika Mahal** preserves the imperial culinary traditions of Awadh and Mughal royal courts. Master khansamas slow-cook signature delicacies in sealed earthenware deghs with fragrant saffron, mace, cardamom, and heirloom spice blends.
+- [About The Project](#-about-the-project)
+- [Tech Stack](#-tech-stack)
+- [Key Features](#-key-features)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation & Local Run](#installation--local-run)
+- [Form & Webhook Configuration](#-form--webhook-configuration)
+  - [1. Web3Forms Email Notifications](#1-web3forms-email-notifications)
+  - [2. Google Sheets Webhook Backup](#2-google-sheets-webhook-backup)
+- [Responsive Breakpoints](#-responsive-breakpoints)
+- [Contact & Location](#-contact--location)
 
 ---
 
-## 🌟 Key Features
+## 👑 About The Project
 
-- **Royal Culinary Experience**: Authentic menu featuring *Dum Awadhi Nalli Nihari*, *Galouti Kebab*, *Murgh Makhani*, *Dal Bukhara (24-Hr Dum)*, *Awadhi Gosht Biryani*, and *Shahi Tukda*.
-- **Real Multi-Channel Table Reservations**:
-  - **Email Delivery**: Instant HTML booking notifications via **Web3Forms** sent directly to `reservations@zaikamahal.com`.
-  - **Cloud Spreadsheet Backup**: Connects to **Google Sheets** via Google Apps Script Webhook ([`google_apps_script.js`](./google_apps_script.js)).
-  - **Instant WhatsApp Booking**: Pre-formatted WhatsApp messages for quick table confirmation.
-  - **Client-side Validation & Duplicate Prevention**: Dynamic past-date blocking, phone format validation, and double-click prevention.
-- **Master Khansamas Showcase**: Dedicated profiles and headshots of the executive master chefs.
-- **Upcoming Heritage Events**: Ghazal & Sufi musical evenings, Diwali Grand Shahi Dawat, and Dum Cooking Masterclasses.
-- **Fully Responsive Architecture**: Fluid layouts tested across 375px, 414px, 768px, 1024px, 1440px, and 1920px viewports with 44px+ touch targets.
-- **SEO & Accessibility**: Complete Schema.org `Restaurant` JSON-LD structured data, Open Graph tags, and descriptive image `alt` attributes.
+**Zaika Mahal** is an authentic Indian fine dining restaurant situated in Connaught Place, New Delhi. The website provides guests with an immersive digital experience reflecting the grandeur of Mughal and Awadhi royal courts, featuring:
+
+- A curated selection of heirloom recipes (Biryanis, Kebabs, Thalis, and Desserts).
+- Executive chef and master *khansama* profiles.
+- Upcoming cultural and culinary event showcases.
+- Real-time online table reservations with instant email alerts, cloud spreadsheet logging, and WhatsApp booking.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| **HTML5** | Semantic, accessible page architecture and Schema.org JSON-LD structured data |
+| **CSS3** | Custom design tokens, responsive CSS Grid / Flexbox, animations, and dark theme |
+| **JavaScript (ES6+)** | Dynamic slider, parallax scrolling, client-side validation, and asynchronous form dispatching |
+| **Ionicons** | Vector icons for navigation, contact items, and UI elements |
+| **Google Fonts** | Typography pairing featuring *Forum* (display serif) and *DM Sans* (body sans-serif) |
+| **Web3Forms API** | Serverless form endpoint for instant HTML email delivery to the restaurant inbox |
+| **Google Apps Script** | Cloud webhook integration to append reservation data into Google Sheets |
+
+---
+
+## ✨ Key Features
+
+- **Royal Menu Presentation**: Interactive menu highlighting bestselling specialties (*Dum Awadhi Nalli Nihari*, *Galouti Kebab*, *Murgh Makhani*, *Dal Bukhara*, *Awadhi Biryani*, and *Shahi Tukda*) with authentic Indian currency (`₹`) pricing.
+- **Reliable Booking Pipeline**:
+  - **Email Alerts**: Dispatches formatted HTML notifications to `reservations@zaikamahal.com`.
+  - **Google Sheets Backup**: Appends every booking row to a shared spreadsheet.
+  - **WhatsApp Direct Booking**: One-tap pre-filled WhatsApp reservation link (`wa.me/919876543210`).
+  - **Validation & Duplicate Protection**: Past date blocking, phone number validation, double-click prevention with loading spinners, and offline `localStorage` audit logging.
+- **Master Khansamas Showcase**: Dedicated profiles and curated portrait photography of executive chefs.
+- **Cultural Events Calendar**: Announcements for Ghazal & Sufi musical evenings, festive royal feasts, and masterclasses.
+- **Performance & SEO Optimized**: Preloaded fonts, non-blocking deferred scripts, lazy-loaded images, Open Graph cards, and Google Rich Snippet support.
+
+---
+
+## 📂 Project Structure
+
+```text
+restaurant-website/
+├── assets/
+│   ├── css/
+│   │   └── style.css            # Core stylesheet with design tokens & responsive media queries
+│   ├── js/
+│   │   └── script.js            # Interactive behaviors, slider, validation, & form handlers
+│   └── images/                  # Optimized logos, hero slides, menu items, & chef portraits
+│       ├── logo.svg             # Golden royal emblem & typography
+│       ├── hero-slider-*.jpg    # Hero banner slides
+│       ├── menu-*.png           # Royal dish photography
+│       ├── event-*.jpg          # Cultural event banners
+│       └── ...                  # Decorative ornaments, icons, and textures
+├── google_apps_script.js        # Ready-to-deploy Google Apps Script webhook code
+├── index.html                   # Main single-page application markup
+├── style-guide.md               # Design token specifications (colors, fonts, spacing)
+├── .gitignore                   # Git exclusion rules
+└── README.md                    # Project documentation
+```
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
+### Prerequisites
 
-```bash
-git clone https://github.com/zaikamahal/zaikamahal-website.git
-cd zaikamahal-website
-```
+To view or deploy this project, you only need a modern web browser and [Git](https://git-scm.com/).
 
-### 2. Run Locally
+### Installation & Local Run
 
-Open `index.html` directly in any web browser, or use a local static server:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Dileshwar99/restaurant-website.git
+   cd restaurant-website
+   ```
 
-```bash
-# Python 3
-python -m http.server 8000
+2. **Open the site**:
+   - Double-click `index.html` to open it directly in your browser.
+   - *Or* run a lightweight local static server:
 
-# Node.js (npx serve)
-npx serve .
-```
+   ```bash
+   # Using Python 3
+   python -m http.server 8000
 
-Visit `http://localhost:8000` in your browser.
+   # Using Node.js (npx serve)
+   npx serve .
+   ```
 
----
-
-## ⚙️ Configuration
-
-### Web3Forms Email Notifications
-1. Obtain a free access key at [Web3Forms](https://web3forms.com).
-2. Open `index.html` and replace `YOUR_ACCESS_KEY_HERE` with your access key in:
-   - Line 950 (Online Reservation form)
-   - Line 1296 (Newsletter Subscription form)
-
-### Google Sheets Reservation Backup (Optional)
-1. Open Google Sheets and create a new spreadsheet.
-2. In the top menu, go to **Extensions** → **Apps Script**.
-3. Paste the contents of [`google_apps_script.js`](./google_apps_script.js).
-4. Click **Deploy** → **New deployment** (Type: *Web app*, Access: *Anyone*).
-5. Copy the generated Web App URL and paste it into `assets/js/script.js` under `GOOGLE_SHEETS_WEBHOOK_URL`.
+3. **Visit the local URL**:
+   Open `http://localhost:8000` in your web browser.
 
 ---
 
-## 📞 Contact & Location
+## ⚙️ Form & Webhook Configuration
 
+### 1. Web3Forms Email Notifications
+The reservation and newsletter forms use [Web3Forms](https://web3forms.com) for serverless email delivery.
+
+1. Generate a free access key at [Web3Forms](https://web3forms.com).
+2. In `index.html`, replace `YOUR_ACCESS_KEY_HERE` on:
+   - **Line 950**: Online Reservation Form (`#reservation-form`)
+   - **Line 1296**: Newsletter Subscription Form (`#newsletter-form`)
+
+### 2. Google Sheets Webhook Backup
+To record bookings automatically in a Google Sheet:
+
+1. Create a new Google Sheet at [sheets.new](https://sheets.new).
+2. Open **Extensions** → **Apps Script**.
+3. Replace any starter code with the contents of [`google_apps_script.js`](./google_apps_script.js).
+4. Click **Deploy** → **New deployment**:
+   - **Type**: *Web app*
+   - **Execute as**: *Me*
+   - **Who has access**: *Anyone*
+5. Copy the deployed Web App URL and paste it into `assets/js/script.js` under:
+   ```javascript
+   const GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+   ```
+
+---
+
+## 📱 Responsive Breakpoints
+
+The design is engineered to deliver a seamless layout across all device viewports:
+
+| Viewport Width | Device Category | Layout Behavior |
+|---|---|---|
+| **375px – 480px** | Mobile Devices | Full-width single-column stacked forms, unclipped logo, minimum 44px touch targets |
+| **575px – 767px** | Large Mobile & Small Tablets | 2-column input wrappers, wrapped reservation controls |
+| **768px – 1023px** | Tablets (Portrait / Landscape) | 3-column chef cards, 3-column reservation dropdowns, side-by-side grids |
+| **1024px – 1399px** | Small Laptops / Desktops | Multi-column menu layout, sticky topbar with business details |
+| **1400px+** | Wide Desktop Monitors | Centered fixed max-width containers with ornamental border flourishes |
+
+---
+
+## 📍 Contact & Location
+
+- **Restaurant**: Zaika Mahal — Royal Indian Fine Dining
 - **Address**: 12/4, Heritage Boulevard, Connaught Place, New Delhi 110001, India
 - **Phone**: [+91 98765 43210](tel:+919876543210)
 - **Email**: [reservations@zaikamahal.com](mailto:reservations@zaikamahal.com)
-- **Hours**: Monday – Sunday | Lunch: 12:00 PM – 3:30 PM | Dinner: 7:00 PM – 11:30 PM
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](./LICENSE) — Copyright © 2026 Zaika Mahal.
+- **Dining Hours**: Monday to Sunday
+  - **Lunch**: 12:00 PM – 3:30 PM
+  - **Dinner**: 7:00 PM – 11:30 PM
