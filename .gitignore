@@ -1,0 +1,25 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor & IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Environment & Logs
+.env
+.env.local
+*.log
+npm-debug.log*
+
+# Node Modules (if tools are added)
+node_modules/
+dist/
+.cache/
