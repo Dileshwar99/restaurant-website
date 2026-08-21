@@ -377,15 +377,15 @@ if (reservationForm) {
       const data = await response.json().catch(() => ({}));
 
       if (response.ok || data.success || formData.get("access_key") === "YOUR_ACCESS_KEY_HERE") {
-        showToast(`Shukriya, ${nameVal}! Your table for ${bookingRecord.person} on ${bookingRecord.date} at ${bookingRecord.time} has been reserved. Our khansama team will confirm shortly via +91 98765 43210.`);
+        showToast(`Shukriya, ${nameVal}! Your table for ${bookingRecord.person} on ${bookingRecord.date} at ${bookingRecord.time} has been reserved. Our khansama team will confirm shortly via +91 78088 54340.`);
         reservationForm.reset();
         if (resDateInput) resDateInput.min = todayStr;
       } else {
-        showToast(data.message || "Your booking has been saved locally! Please call us at +91 98765 43210 or message on WhatsApp to confirm.", "checkmark-circle-outline");
+        showToast(data.message || "Your booking has been saved locally! Please call us at +91 78088 54340 or message on WhatsApp to confirm.", "checkmark-circle-outline");
         reservationForm.reset();
       }
     } catch (networkError) {
-      showToast(`Shukriya, ${nameVal}! Booking recorded locally. For instant confirmation, please WhatsApp or call us at +91 98765 43210.`, "checkmark-circle-outline");
+      showToast(`Shukriya, ${nameVal}! Booking recorded locally. For instant confirmation, please WhatsApp or call us at +91 78088 54340.`, "checkmark-circle-outline");
       reservationForm.reset();
     } finally {
       if (submitBtn) {

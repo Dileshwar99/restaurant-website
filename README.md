@@ -52,7 +52,7 @@
 - **Reliable Booking Pipeline**:
   - **Email Alerts**: Dispatches formatted HTML notifications to `reservations@zaikamahal.com`.
   - **Google Sheets Backup**: Appends every booking row to a shared spreadsheet.
-  - **WhatsApp Direct Booking**: One-tap pre-filled WhatsApp reservation link (`wa.me/919876543210`).
+  - **WhatsApp Direct Booking**: One-tap pre-filled WhatsApp reservation link (`wa.me/917808854340`).
   - **Validation & Duplicate Protection**: Past date blocking, phone number validation, double-click prevention with loading spinners, and offline `localStorage` audit logging.
 - **Master Khansamas Showcase**: Dedicated profiles and curated portrait photography of executive chefs.
 - **Cultural Events Calendar**: Announcements for Ghazal & Sufi musical evenings, festive royal feasts, and masterclasses.
@@ -160,7 +160,7 @@ The design is engineered to deliver a seamless layout across all device viewport
 
 - **Restaurant**: Zaika Mahal — Royal Indian Fine Dining
 - **Address**: 12/4, Heritage Boulevard, Connaught Place, New Delhi 110001, India
-- **Phone**: [+91 98765 43210](tel:+919876543210)
+- **Phone**: [+91 78088 54340](tel:+917808854340)
 - **Email**: [reservations@zaikamahal.com](mailto:reservations@zaikamahal.com)
 - **Dining Hours**: Monday to Sunday
   - **Lunch**: 12:00 PM – 3:30 PM
